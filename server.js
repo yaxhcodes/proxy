@@ -18,6 +18,7 @@ app.get("/proxy", async (req, res) => {
         const response = await axios.get(targetUrl, {
             headers: {
                 "User-Agent": "Mozilla/5.0", // Some servers block requests without a User-Agent
+                'Referer': 'https://megacloud.club/'
             },
             responseType: "stream", // Ensures streaming responses (e.g., video)
         });
